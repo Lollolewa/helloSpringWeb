@@ -19,8 +19,8 @@
         <td th:text="${book.cost}">100</td>
         <td>
             <a th:href="@{'/books/edit/' + ${book.id}}">Edit</a>
-            <form th:action="@{'/books/delete/' + ${book.id}" method="post" onsubmit="return confirm('Sei sicuro di voler cancellare questo libro?')">Delete
-                <button type="submit">Delete</button>
+            <form th:action="@{'/books/delete/' + ${book.id}}" method="post" onsubmit="return confirm('Sei sicuro di voler cancellare questo libro?')">
+                <button type="submit">Elimina Libro</button>
             </form>
         </td>
     </tr>

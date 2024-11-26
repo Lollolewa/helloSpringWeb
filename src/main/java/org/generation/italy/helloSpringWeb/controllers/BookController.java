@@ -13,6 +13,10 @@ import java.util.List;
 @Controller
 @RequestMapping("/books")
 public class BookController {
+//    private List<Book> books = List.of(
+//            new Book(1,"DarkGay", 444,250),
+//            new Book(2,"BlackSlave_Nigger",999,35)
+//    );
     private LibraryService libraryService;
     @Autowired
     public BookController(LibraryService libraryService){
@@ -36,7 +40,7 @@ public class BookController {
         return "books/form";
     }
     @PostMapping("/delete/{id}")
-    public String deleteBook(@PathVariable Long id) {
+    public String delete(@PathVariable Long id){
         this.libraryService.deleteBook(id);
         return "redirect:/books";
     }
