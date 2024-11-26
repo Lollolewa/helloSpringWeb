@@ -10,4 +10,5 @@ public interface LibraryService {
     Optional<Book> findBookById(long id);
     boolean updateBook(Book newBook);
     boolean deleteBook(long id);
+    Book save(Book newBook);
 }
