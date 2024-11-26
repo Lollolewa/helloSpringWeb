@@ -1,5 +1,7 @@
 package org.generation.italy.helloSpringWeb.model.services;
 
+import org.generation.italy.helloSpringWeb.model.entities.Book;
+
 import java.util.List;
 import java.util.Optional;
 

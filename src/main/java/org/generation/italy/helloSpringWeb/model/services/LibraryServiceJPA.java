@@ -1,5 +1,5 @@
 package org.generation.italy.helloSpringWeb.model.services;
-
+import org.generation.italy.helloSpringWeb.model.entities.Book;
 import org.generation.italy.helloSpringWeb.model.repositories.BookRepositoryJPA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

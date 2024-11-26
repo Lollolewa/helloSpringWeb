@@ -1,6 +1,5 @@
 package org.generation.italy.helloSpringWeb.controllers;
-
-
+import org.generation.italy.helloSpringWeb.model.entities.Book;
 import org.generation.italy.helloSpringWeb.model.services.LibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,7 +27,7 @@ public class BookController {
     }
 
     @PostMapping
-    public String saveBook(@ModelAttribute("BOOK")Book book){
+    public String saveBook(@ModelAttribute("BOOK") Book book){
         this.libraryService.save(book);
         return "redirect:/books";
     }
