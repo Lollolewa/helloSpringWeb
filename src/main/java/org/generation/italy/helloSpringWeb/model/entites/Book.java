@@ -16,15 +16,12 @@ public class Book {
     public long getId() {
         return id;
     }
-
     public String getTitle() {
         return title;
     }
-
     public int getNumPages() {
         return numPages;
     }
-
     public double getCost() {
         return cost;
     }
