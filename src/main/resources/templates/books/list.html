@@ -14,15 +14,13 @@
         <th>Actions</th>
     </tr>
     <tr th:each="book : ${BOOKS}">
-        <td th:text="${book.title}">Il Signore dei Piselli</td>
-        <td th:text="${book.numPages}">1000</td>
-        <td th:text="${book.cost}">100.00</td>
-        <td>
-            <a th:href="@{'/books/edit/' + ${book.id}}">Edit</a>
-            <a th:href="@{'/books/delete/' + ${book.id}}">Delete</a>
-        </td>
+        <td th:text="${book.title}">Il Signore Degli Anelli</td>
+        <td th:text="${book.numPages}">100000</td>
+        <td th:text="${book.cost}">100</td>
+        <td><a th:href="@{'/books/edit/' + ${book.id}}">Edit</a> <a
+                th:href="@{'/books/delete/' + ${book.id}}">Delete</a></td>
     </tr>
 </table>
-<a th:href="@{'/books/create/'}">Crea un nuovo libro</a>
+<a th:href="@{'/books/create'}">Crea un nuovo libro</a>
 </body>
 </html>

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aggiungi nuovo libro</title>
+    <title>Aggiungi un nuovo Libro</title>
 </head>
 <body>
-    <h1>Aggiungi nuovo libro</h1>
-    <form th:action="@{/books}" method="post">
-        <label for="title">Titolo:</label>
-        <input type="text" id="title" name="title"><br><br>
-        <label for="numPages">Numero di pagine:</label>
-        <input type="number" id="numPages" name="numPages"><br><br>
-        <label for="cost">Prezzo:</label>
-        <input type="number" id="cost" name="cost"><br><br>
-        <input type="submit" value="Salva">
+    <h1>Aggiungi un nuovo libro</h1>
+    <form th:action="@{/books}" method="post" th:object="${BOOK}">
+        <label for="title">Titolo</label>
+        <input type="text" id="title" th:field="*{title}" required>
+        <br>
+        <label for="numPages">Numero Pagine</label>
+        <input type="number" id="numPages" th:field="*{numPages}" required>
+        <br>
+        <label for="cost">Costo</label>
+        <input type="text" id="cost" th:field="*{cost}" required>
+        <br>
+        <button type="submit">Aggiungi libro</button>
     </form>
-    <a href="/books">Torna alla lista dei libri</a>
+    <a th:href="@{/books}">Vai alla lista di tutti i libri</a>
 </body>
 </html>

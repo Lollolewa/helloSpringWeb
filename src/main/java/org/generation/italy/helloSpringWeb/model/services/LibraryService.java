@@ -7,7 +7,8 @@ import java.util.Optional;
 
 public interface LibraryService {
     List<Book> getAllBooks();
-    Optional<Book> findById(long id);
+    Optional<Book> findBookById(long id);
     boolean updateBook(Book newBook);
-    boolean deleteById(long id);
+    boolean deleteBook(long id);
+    Book save(Book newBook);
 }
