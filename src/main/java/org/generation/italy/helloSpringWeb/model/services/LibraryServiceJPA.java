@@ -10,12 +10,14 @@ import java.util.Optional;
 @Service
 public class LibraryServiceJPA implements LibraryService{
     private BookRepositoryJPA bookRepo;
+
     @Autowired
     public LibraryServiceJPA(BookRepositoryJPA bookRepo){
         this.bookRepo = bookRepo;
-        System.out.println("chiamato il costruttore del libraryService");
+        System.out.println("Chiamato il costruttore del library service");
         System.out.println(this.bookRepo.getClass().getName());
     }
+
     @Override
     public List<Book> getAllBooks() {
         return bookRepo.findAll();
@@ -28,7 +30,7 @@ public class LibraryServiceJPA implements LibraryService{
 
     @Override
     public boolean updateBook(Book newBook) {
-        if(!bookRepo.existsById(newBook.getId())){
+        if (!bookRepo.existsById(newBook.getId())){
             return false;
         }
         bookRepo.save(newBook);
@@ -37,7 +39,7 @@ public class LibraryServiceJPA implements LibraryService{
 
     @Override
     public boolean deleteBook(long id) {
-        if(!bookRepo.existsById(id)){
+        if (!bookRepo.existsById(id)){
             return false;
         }
         bookRepo.deleteById(id);
