@@ -1,7 +1,6 @@
 package org.generation.italy.helloSpringWeb.controllers;
 
 
-import org.generation.italy.helloSpringWeb.model.entites.Book;
 import org.generation.italy.helloSpringWeb.model.services.LibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
