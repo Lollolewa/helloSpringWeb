@@ -23,4 +23,9 @@ public class BookController {
         model.addAttribute("BOOKS",books);
         return "books/list";
     }
+    @GetMapping("/new")
+    public String createBook(Model model){
+        model.addAttribute("BOOK", new Book());
+        return "books/form";
+    }
 }
