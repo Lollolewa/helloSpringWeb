@@ -34,4 +34,17 @@ public class Book {
     public double getCost() {
         return cost;
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public void setNumPages(int numPages) {
+        this.numPages = numPages;
+    }
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
 }
