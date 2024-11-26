@@ -17,8 +17,12 @@
         <td th:text="${book.title}">Il Signore Degli Anelli</td>
         <td th:text="${book.numPages}">100000</td>
         <td th:text="${book.cost}">100</td>
-        <td><a th:href="@{'/books/edit/' + ${book.id}}">Edit</a> <a
-                th:href="@{'/books/delete/' + ${book.id}}">Delete</a></td>
+        <td>
+            <a th:href="@{'/books/edit/' + ${book.id}}">Edit</a>
+            <form th:action="@{'/books/delete/' + ${book.id}}" method="post" onsubmit="return confirm('Sei sicuro di voler cancellare questo libro?')">
+                <button type="submit">Elimina Libro</button>
+            </form>
+        </td>
     </tr>
 </table>
 <a th:href="@{'/books/create'}">Crea un nuovo libro</a>

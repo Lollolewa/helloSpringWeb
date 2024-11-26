@@ -18,6 +18,18 @@ public class Book {
 
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setNumPages(int numPages) {
+        this.numPages = numPages;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
     public Book(long id, String title, int numPages, double cost) {
         this.id = id;
         this.title = title;
